@@ -9,6 +9,8 @@ This dataset integrates historical quarterly surrender data and detailed perform
 | `項目` | String | 統計指標名稱 (解約金, 總保費收入, 保險給付總額, 新契約保費_FYP, 淨現金流). | 解約金 |
 | `數值` | Float | 數值金額 (單位：百萬新台幣 / Unit: Million TWD). | 481500 |
 | `備註` | String | 數據背景說明或來源註記. | 2026 Q1 新聞報導 |
+| `download_timestamp` | String | 原始資料取得時間 (CST). | `2026-05-23 21:33:55` |
+| `process_timestamp` | String | CSV 產生或清洗完成時間 (CST). | `2026-05-23 21:33:55` |
 
 ## Data Content
 1. **Historical Surrender (2020-2025):** Quarterly cumulative "解約金" (Surrender Benefits).

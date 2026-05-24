@@ -27,13 +27,17 @@ def generate_full_historical_data():
     # Quarterly stats summarized from TII and LIA-ROC reports (Unit: Million TWD)
     data = []
 
-    # Helper to add a full quarterly set
+    # Add timestamps for freshness tracking
+    import datetime
+    process_ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    
+    # helper to add a full quarterly set
     def add_q_data(year_roc, q, surrender, premium, payout, fyp, note=""):
-        data.append({"年度": year_roc, "季度": q, "項目": "解約金", "數值": surrender, "備註": note})
-        data.append({"年度": year_roc, "季度": q, "項目": "總保費收入", "數值": premium, "備註": note})
-        data.append({"年度": year_roc, "季度": q, "項目": "保險給付總額", "數值": payout, "備註": note})
-        data.append({"年度": year_roc, "季度": q, "項目": "新契約保費_FYP", "數值": fyp, "備註": note})
-        data.append({"年度": year_roc, "季度": q, "項目": "淨現金流", "數值": premium - payout, "備註": note})
+        data.append({"年度": year_roc, "季度": q, "項目": "解約金", "數值": surrender, "備註": note, "download_timestamp": process_ts, "process_timestamp": process_ts})
+        data.append({"年度": year_roc, "季度": q, "項目": "總保費收入", "數值": premium, "備註": note, "download_timestamp": process_ts, "process_timestamp": process_ts})
+        data.append({"年度": year_roc, "季度": q, "項目": "保險給付總額", "數值": payout, "備註": note, "download_timestamp": process_ts, "process_timestamp": process_ts})
+        data.append({"年度": year_roc, "季度": q, "項目": "新契約保費_FYP", "數值": fyp, "備註": note, "download_timestamp": process_ts, "process_timestamp": process_ts})
+        data.append({"年度": year_roc, "季度": q, "項目": "淨現金流", "數值": premium - payout, "備註": note, "download_timestamp": process_ts, "process_timestamp": process_ts})
 
     # 2020 (109) - Low interest stability
     add_q_data(109, "Q1", 196000, 785000, 460000, 220000, "疫情初期/低利")
