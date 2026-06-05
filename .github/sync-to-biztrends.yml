@@ -3,5 +3,5 @@ group:
     files:
       - source: data/raw_life_insurance_statistics_2020_2026.csv
         dest: data/TaiwanLifeInsurance/raw_life_insurance_statistics_2020_2026.csv
-      - source: raw_column_definition.md
+      - source: data/raw_column_definition_life_insurance_statistics_2020_2026.md
         dest: definitions/raw_column_definition_TaiwanLifeInsurance.md

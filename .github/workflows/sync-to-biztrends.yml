@@ -7,7 +7,7 @@ on:
       - main
     paths:
       - "data/raw_life_insurance_statistics_2020_2026.csv"
-      - "raw_column_definition.md"
+      - "data/raw_column_definition_life_insurance_statistics_2020_2026.md"
       - ".github/sync-to-biztrends.yml"
       - ".github/workflows/sync-to-biztrends.yml"
 
