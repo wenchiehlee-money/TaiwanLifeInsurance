@@ -1,7 +1,8 @@
 group:
-  - repository: wenchiehlee-money/biztrends.TW
-    files:
+  - files:
       - source: data/raw_life_insurance_statistics_2020_2026.csv
         dest: data/TaiwanLifeInsurance/raw_life_insurance_statistics_2020_2026.csv
       - source: data/raw_column_definition_life_insurance_statistics_2020_2026.md
         dest: definitions/raw_column_definition_TaiwanLifeInsurance.md
+    repos: |
+        wenchiehlee-money/biztrends.TW
