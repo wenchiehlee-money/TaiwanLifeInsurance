@@ -29,7 +29,7 @@ def generate_full_historical_data():
 
     # Add timestamps for freshness tracking
     import datetime
-    process_ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    process_ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S CST")
     
     # helper to add a full quarterly set
     def add_q_data(year_roc, q, surrender, premium, payout, fyp, note=""):
